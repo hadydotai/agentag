@@ -1,0 +1,39 @@
+{
+	"name": "agentag",
+	"version": "0.1.0",
+	"description": "Build AI agents declaratively with JSX syntax",
+	"type": "module",
+	"private": false,
+	"bin": {
+		"agenttag": "./src/cli.js"
+	},
+	"engines": {
+		"node": ">=22.13"
+	},
+	"files": [
+		"src",
+		"types",
+		"README.md"
+	],
+	"scripts": {
+		"build": "vite build",
+		"check": "tsc --noEmit --project tsconfig.src.json && tsc --noEmit --project tsconfig.types.json",
+		"test": "tsx --test test/**/*.test.{js,jsx}"
+	},
+	"dependencies": {
+		"vite": "^8.2.0"
+	},
+	"peerDependencies": {
+		"@earendil-works/pi-ai": "^0.83.0"
+	},
+	"peerDependenciesMeta": {
+		"@earendil-works/pi-ai": {
+			"optional": true
+		}
+	},
+	"devDependencies": {
+		"@earendil-works/pi-ai": "^0.83.0",
+		"tsx": "^4.20.3",
+		"typescript": "^7.0.2"
+	}
+}
